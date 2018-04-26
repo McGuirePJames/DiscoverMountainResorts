@@ -1,10 +1,10 @@
-### Discover Mountain Resorts
+# Discover Mountain Resorts
 
 A website that allows users to share some of their favorite parts about a ski resort.  Whether it be a restaurant, a gorgeous view, or even a ski trail.  
 
 ## Technologies Used
 
-#Front End
+### Front End
 - React
 - Redux
 - TypeScript
@@ -12,7 +12,7 @@ A website that allows users to share some of their favorite parts about a ski re
 - Bootstrap
 - jQuery
 
-#Back End
+### Back End
 - Azure
 - Entity Framework
 - .NET Core
