@@ -1,0 +1,190 @@
+﻿body {
+    background-color: #F1F1F1;
+}
+
+
+
+#GoogleMapsContainer {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 45px;
+    border-radius: 2px;
+    -webkit-box-shadow: 1px 1px 6px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 6px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px 1px 6px 0px rgba(0,0,0,0.75);
+    margin-bottom: 20px;
+}
+
+    #GoogleMapsContainer .column-left {
+        background-color: white;
+        -webkit-box-shadow: 0px 2px 3px 1px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 2px 3px 1px rgba(0,0,0,0.75);
+        box-shadow: 0px 2px 3px 1px rgba(0,0,0,0.75);
+        z-index: 1;
+        padding: 5px 25px 5px 25px;
+    }
+
+        #GoogleMapsContainer .column-left b {
+            color: #38BBED;
+        }
+
+        #GoogleMapsContainer .column-left .title {
+            margin-top: 15px;
+            font-size: 21pt;
+            line-height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #GoogleMapsContainer .column-left .border-separator {
+            height: 3px;
+            width: 100%;
+            background-color: rgb(234, 233, 235);
+            background-color: #38bbed;
+            margin-bottom: 15px;
+            margin-top: 15px;
+        }
+
+        #GoogleMapsContainer .column-left .description {
+            font-size: 15pt;
+        }
+
+    #GoogleMapsContainer p {
+        margin-bottom: 0;
+        font-weight: 100;
+    }
+
+#map {
+    width: 100%;
+    height: 600px;
+}
+
+.trending-item-container-component {
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 50px;
+}
+
+    .trending-item-container-component p {
+        margin-bottom: 0;
+    }
+
+.trending-item {
+    height: 400px;
+    min-height: 400px;
+    max-height: 400px;
+    overflow: hidden;
+    -webkit-box-shadow: 1px 1px 6px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 6px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px 1px 6px 0px rgba(0,0,0,0.75);
+    background-color: white;
+    margin-top: 30px;
+}
+
+.trending-item-container-component .trending-item-container .trending-item .top {
+    z-index: 100;
+    min-height: 60%;
+    max-height: 60%;
+    overflow: hidden;
+    background-color: #05202B;
+}
+
+    .trending-item-container-component .trending-item-container .trending-item .top .trending-item-image-container {
+        height: 240px;
+        position: relative;
+    }
+
+        .trending-item-container-component .trending-item-container .trending-item .top .trending-item-image-container .trending-image-ski-resort-logo-container {
+            height: 20%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+            .trending-item-container-component .trending-item-container .trending-item .top .trending-item-image-container .trending-image-ski-resort-logo-container img {
+                height: 100%;
+            }
+
+        .trending-item-container-component .trending-item-container .trending-item .top .trending-item-image-container .trending-image-item-image-container {
+            height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+            .trending-item-container-component .trending-item-container .trending-item .top .trending-item-image-container .trending-image-item-image-container img {
+                height: 100%;
+            }
+
+.trending-item-container-component .trending-item-container .trending-item .bottom {
+    min-height: 40%;
+    background-color: #05202B;
+    overflow: hidden;
+}
+
+    .trending-item-container-component .trending-item-container .trending-item .bottom .trending-product-ski-resort {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 20px 20px 2px 20px
+    }
+
+        .trending-item-container-component .trending-item-container .trending-item .bottom .trending-product-ski-resort p {
+            font-size: 22pt;
+            color: white;
+            font-weight: 400;
+        }
+
+    .trending-item-container-component .trending-item-container .trending-item .bottom .trending-product-item-name {
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 2px 20px 10px 20px;
+    }
+
+        .trending-item-container-component .trending-item-container .trending-item .bottom .trending-product-item-name p {
+            font-size: 16pt;
+            font-weight: 100;
+        }
+
+        .trending-item-container-component .trending-item-container .trending-item .bottom .trending-product-item-name .trending-product-icon-container {
+            margin-left: 20px;
+            margin-top: 2px;
+        }
+
+    .trending-item-container-component .trending-item-container .trending-item .bottom .trending-product-view {
+        padding: 2px 20px 10px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .trending-item-container-component .trending-item-container .trending-item .bottom .trending-product-view div {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px 10px 5px 10px;
+            width: 35%;
+            background-color: white;
+            border-radius: 2px;
+            cursor: pointer;
+            outline: none;
+            -webkit-box-shadow: 1px 1px 3px 2px rgba(0,0,0,0.75);
+            -moz-box-shadow: 1px 1px 3px 2px rgba(0,0,0,0.75);
+            box-shadow: 1px 1px 3px 2px rgba(0,0,0,0.75);
+            transition: 0.2s;
+            user-select: none;
+        }
+
+            .trending-item-container-component .trending-item-container .trending-item .bottom .trending-product-view div:active {
+                top: 1px;
+                -webkit-box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.75);
+                -moz-box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.75);
+                box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.75);
+            }

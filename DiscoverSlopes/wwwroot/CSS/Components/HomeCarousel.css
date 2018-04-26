@@ -1,0 +1,18 @@
+﻿.slick-arrow {
+    margin-top: -30px !important;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-size: 40px !important;
+}
+
+.slick-prev {
+    margin-left: 40px !important;
+    z-index: 100;
+    color: red;
+    background-color: red;
+}
+
+.slick-next {
+    margin-right: 60px;
+}
