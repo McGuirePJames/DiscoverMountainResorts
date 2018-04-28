@@ -1,0 +1,5 @@
+﻿export const LOGIN = 'LOGIN';
+export type LOGIN = typeof LOGIN;
+
+export const TOGGLE_PASSWORD_REVEAL = 'TOGGLE_PASSWORD_REVEAL';
+export type TOGGLE_PASSWORD_REVEAL = typeof TOGGLE_PASSWORD_REVEAL;

@@ -18,10 +18,9 @@ namespace DiscoverSlopes.Models
 
         public static async Task<List<DiscoverSlopes.Models.SkiResorts>> GetSkiResorts()
         {
-            List<DiscoverSlopes.Domain.SkiResorts> skiResorts = new List<DiscoverSlopes.Domain.SkiResorts>();
             var skiResortContext = new DiscoverSlopes.Data.SkiResortContext();
+            List<DiscoverSlopes.Domain.SkiResorts> skiResorts = await skiResortContext.SkiResorts.ToListAsync();
 
-            skiResorts = await skiResortContext.SkiResorts.ToListAsync();
             List<DiscoverSlopes.Models.SkiResorts> mappedSkiResorts = AutoMapper.Mapper.Map<List<DiscoverSlopes.Models.SkiResorts>>(skiResorts);
 
             return mappedSkiResorts;

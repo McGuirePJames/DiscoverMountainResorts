@@ -13,6 +13,8 @@ using Microsoft.Extensions.Configuration.UserSecrets;
 using Microsoft.AspNetCore.Identity;
 using DiscoverSlopes.Models;
 using DiscoverSlopes.Data;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace CoreWebApplication
 {
@@ -42,11 +44,17 @@ namespace CoreWebApplication
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddDbContext<SkiResortContext>(option =>
-            //    option.UseSqlServer(connectionString: Configuration.GetConnectionString("DiscoverMountainResortsProdDB")));
+            services.AddDbContext<ApplicationDbContext>(option =>
+                option.UseSqlServer(connectionString: Configuration.GetConnectionString("DiscoverMountainResortsProdDB")));
+
+            services.TryAddSingleton<Microsoft.AspNetCore.Http.IHttpContextAccessor, HttpContextAccessor>();
 
             services.AddMvc();
-            services.AddIdentity<ApplicationUser, IdentityRole>()
+
+
+
+
+            services.AddIdentity<DiscoverSlopes.Models.ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 

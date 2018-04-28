@@ -72,9 +72,8 @@
     }
 
 .trending-item {
-    height: 400px;
-    min-height: 400px;
-    max-height: 400px;
+    /* min-height: 400px; */
+    /* max-height: 400px; */
     overflow: hidden;
     -webkit-box-shadow: 1px 1px 6px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 1px 1px 6px 0px rgba(0,0,0,0.75);
@@ -121,9 +120,9 @@
             }
 
 .trending-item-container-component .trending-item-container .trending-item .bottom {
-    min-height: 40%;
+    /* min-height: 40%; */
     background-color: #05202B;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
     .trending-item-container-component .trending-item-container .trending-item .bottom .trending-product-ski-resort {

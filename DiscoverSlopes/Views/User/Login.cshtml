@@ -3,10 +3,13 @@
     ViewData["Title"] = "Login";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-
 <link rel="stylesheet" href="~/CSS/User/Login.css" />
+
+<div id="__AjaxAntiForgeryForm" action="#" method="post">@Html.AntiForgeryToken()</div>
 <div id="MountPoint">
+
+</div>
+<div id="LoginMountPoint">
 
 </div>
 <script type="text/javascript" src="~/scripts/js/vendor.bundle.js"></script>

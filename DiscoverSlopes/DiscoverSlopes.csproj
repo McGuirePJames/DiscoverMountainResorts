@@ -8,16 +8,23 @@
     <None Remove="Scripts\entry.tsx" />
     <None Remove="Scripts\Home\Home\ContainerHome.tsx" />
     <None Remove="Scripts\TestEntry.tsx" />
+    <None Remove="src\Actions\UserLoginActions.tsx" />
     <None Remove="src\Components\CarouselComponent.tsx" />
     <None Remove="src\Components\GoogleMapsComponent.tsx" />
     <None Remove="src\Components\HOCHome.tsx" />
-    <None Remove="src\Components\LoginComponent.tsx" />
     <None Remove="src\Components\NavigationBarComponent.tsx" />
     <None Remove="src\Components\TrendingItemComponent.tsx" />
     <None Remove="src\Components\TrendingItemContainerComponent.tsx" />
+    <None Remove="src\Components\UserLoginComponent.tsx" />
     <None Remove="src\Components\UserLoginHOC.tsx" />
+    <None Remove="src\Constants\UserLoginConstants.tsx" />
+    <None Remove="src\Containers\UserLoginContainer.tsx" />
     <None Remove="src\Entry\UserLoginEntry.tsx" />
+    <None Remove="src\Misc\GetAntiForgeryToken.ts" />
     <None Remove="src\Reducers\HomeReducer.tsx" />
+    <None Remove="src\Reducers\UserLoginReducer.tsx" />
+    <None Remove="src\Stores\UserLoginStores.tsx" />
+    <None Remove="src\Types\UserLoginStoreState.tsx" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,6 +33,7 @@
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.2" />
+    <PackageReference Include="Microsoft.Owin" Version="4.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
   </ItemGroup>
 
@@ -34,26 +42,30 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="src\Actions\UserLoginActions.tsx" />
     <TypeScriptCompile Include="src\Components\GoogleMapsComponent.tsx" />
     <TypeScriptCompile Include="src\Components\HOCHome.tsx" />
-    <TypeScriptCompile Include="src\Components\LoginComponent.tsx" />
+    <TypeScriptCompile Include="src\Components\UserLoginComponent.tsx" />
     <TypeScriptCompile Include="src\Components\TrendingItemComponent.tsx" />
     <TypeScriptCompile Include="src\Components\TrendingItemContainerComponent.tsx" />
     <TypeScriptCompile Include="src\Components\UserLoginHOC.tsx" />
+    <TypeScriptCompile Include="src\Constants\UserLoginConstants.tsx" />
+    <TypeScriptCompile Include="src\Containers\UserLoginContainer.tsx" />
     <TypeScriptCompile Include="src\Entry\HomeEntry.tsx" />
     <TypeScriptCompile Include="Scripts\Home\Home\ContainerHome.tsx" />
     <TypeScriptCompile Include="src\Components\CarouselComponent.tsx" />
     <TypeScriptCompile Include="src\Components\NavigationBarComponent.tsx" />
     <TypeScriptCompile Include="src\Entry\UserLoginEntry.tsx" />
+    <TypeScriptCompile Include="src\Misc\GetAntiForgeryToken.ts" />
     <TypeScriptCompile Include="src\Reducers\HomeReducer.tsx" />
+    <TypeScriptCompile Include="src\Reducers\UserLoginReducer.tsx" />
+    <TypeScriptCompile Include="src\Stores\UserLoginStores.tsx" />
+    <TypeScriptCompile Include="src\Types\UserLoginStoreState.tsx" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Scripts\Misc\" />
-    <Folder Include="src\Actions\" />
     <Folder Include="src\app\" />
-    <Folder Include="src\Misc\" />
-    <Folder Include="src\Types\" />
     <Folder Include="ViewModel\" />
   </ItemGroup>
 

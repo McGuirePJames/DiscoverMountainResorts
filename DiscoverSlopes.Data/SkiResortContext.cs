@@ -34,7 +34,7 @@ namespace DiscoverSlopes.Data
         {
             optionsBuilder
                 .UseLoggerFactory(LoggerFactory)
-
+                                .UseSqlServer("Data Source=DESKTOP-GVNG8N1;Initial Catalog=DiscoverMountainResorts;Integrated Security=True");
             base.OnConfiguring(optionsBuilder);
 
         }

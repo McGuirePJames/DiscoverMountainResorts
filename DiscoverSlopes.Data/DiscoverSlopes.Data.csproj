@@ -133,6 +133,7 @@
     <Compile Include="SkiResortContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SkiResortContextFactory.cs" />
+    <Compile Include="UserContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
