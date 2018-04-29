@@ -25,17 +25,32 @@ export class TrendingItemComponent extends React.Component {
                                 </div>
                                 <div className="trending-product-item-name">
                                     <p>9990 Ski Lift </p>
-                                    <div className="trending-product-icon-container">
+                                    {/*<div className="trending-product-icon-container">
                                         <i className="fa fa-cutlery" aria-hidden="true"></i>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
 
                         </div>
-
-                        <div className="trending-product-view">
-                            <div>View</div>
+                        <div className="item-details-container">
+                            <div className="learn-more-container">
+                                <p>Discover</p>
+                            </div>
+                            <div className="viewed-like-container">
+                                <div className="viewed">
+                                    <i className="material-icons">remove_red_eye</i>
+                                    <p>123</p>
+                                </div>
+                                <div className="liked">
+                                    <i className="material-icons">thumb_up</i>
+                                    <p>18</p> 
+                                </div>
+                            </div>
                         </div>
+
+                        {/*<div className="trending-product-view">
+                           <div>View</div>
+                        </div>*/}
                     </div>
                 </div>
             </div>

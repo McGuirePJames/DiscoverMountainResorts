@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using DiscoverSlopes.Data;
 using DiscoverSlopes.Models;
@@ -8,6 +9,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+
 
 namespace DiscoverSlopes.Controllers
 {
@@ -47,37 +49,43 @@ namespace DiscoverSlopes.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> CreateUserAsync()
+        public async Task<IActionResult> CreateUserAsync(string emailAddress, string password)
         {
+
+
+            IdentityResult result = null;
             ApplicationUser user = new ApplicationUser();
             try
             {
-                var result = await mUserManager.CreateAsync(new ApplicationUser
+                result = await mUserManager.CreateAsync(new ApplicationUser
                 {
-                    UserName = "mcguirepjames2@gmail.com",
-                    Email = "mcguirepjames2@gmail.com"
-                }, "Password1234$");
+                    UserName = emailAddress,
+                    Email = emailAddress
+                }, password);
 
                 if (result.Succeeded)
                 {
-                    return Content("User was created", "text/html");
+                    return Json(new { success = true });
                 }
             }
             catch (Exception ex)
             {
                 string exception = ex.ToString();
             }
-            return Content("User creation failed", "text/html");
+            return Json(new { success = false, responseText = result.Errors.FirstOrDefault().Description });
         }
+
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> LoginAsync(string username, string password)
         {
+
             await HttpContext.SignOutAsync(IdentityConstants.ApplicationScheme);
 
             // Sign user in with the valid credentials
             var result = await mSignInManager.PasswordSignInAsync(username, password, true, false);
+
 
             if (result.Succeeded)
             {

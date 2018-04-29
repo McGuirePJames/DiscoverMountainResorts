@@ -1,7 +1,7 @@
 ﻿import * as React from 'react'
 import { Action } from 'redux';
 import * as $ from 'jquery'
-import PropTypes from 'prop-types'
+//import PropTypes from 'prop-types'
 
 export interface Props {
     loginError: string;
@@ -35,7 +35,7 @@ class UserLoginComponent extends React.Component<Props, object> {
                     </div>
                     <div className="right col-sm-12 col-md-7">
                         <div className="form-group">
-                            <label htmlFor="exampleSelect1">Username</label>
+                            <label>Username</label>
                             <div className="form-group form-group-username">
                                 <div className="icon-container icon-envelope">
                                     <i className="fa fa-envelope" aria-hidden="true"></i>
@@ -46,7 +46,7 @@ class UserLoginComponent extends React.Component<Props, object> {
                             </div>
                         </div>
                         <div className="form-group form-group-password">
-                            <label htmlFor="exampleSelect1">Password</label>
+                            <label>Password</label>
                             <div className="form-group">
                                 <div className="icon-container icon-lock">
                                     <i className="fa fa-lock" aria-hidden="true"></i>

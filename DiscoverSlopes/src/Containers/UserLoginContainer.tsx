@@ -20,4 +20,3 @@ export function mapDispatchToProps(dispatch: Dispatch<Actions.UserLoginAction> )
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserLoginComponent as any as React.SFC);
 
-//

@@ -9,6 +9,7 @@
     <None Remove="Scripts\Home\Home\ContainerHome.tsx" />
     <None Remove="Scripts\TestEntry.tsx" />
     <None Remove="src\Actions\UserLoginActions.tsx" />
+    <None Remove="src\Actions\UserSignUpActions.tsx" />
     <None Remove="src\Components\CarouselComponent.tsx" />
     <None Remove="src\Components\GoogleMapsComponent.tsx" />
     <None Remove="src\Components\HOCHome.tsx" />
@@ -17,14 +18,22 @@
     <None Remove="src\Components\TrendingItemContainerComponent.tsx" />
     <None Remove="src\Components\UserLoginComponent.tsx" />
     <None Remove="src\Components\UserLoginHOC.tsx" />
+    <None Remove="src\Components\UserSignUpComponent.tsx" />
     <None Remove="src\Constants\UserLoginConstants.tsx" />
+    <None Remove="src\Constants\UserSignUpConstants.tsx" />
     <None Remove="src\Containers\UserLoginContainer.tsx" />
+    <None Remove="src\Containers\UserSignUpContainer.tsx" />
     <None Remove="src\Entry\UserLoginEntry.tsx" />
+    <None Remove="src\Entry\UserSignUpEntry.tsx" />
     <None Remove="src\Misc\GetAntiForgeryToken.ts" />
     <None Remove="src\Reducers\HomeReducer.tsx" />
     <None Remove="src\Reducers\UserLoginReducer.tsx" />
+    <None Remove="src\Reducers\UserSignUpReducers.tsx" />
     <None Remove="src\Stores\UserLoginStores.tsx" />
+    <None Remove="src\Stores\UserSignUpStore.tsx" />
+    <None Remove="src\TEST.tsx" />
     <None Remove="src\Types\UserLoginStoreState.tsx" />
+    <None Remove="src\Types\UserSignUpStoreState.tsx" />
   </ItemGroup>
 
   <ItemGroup>
@@ -43,24 +52,32 @@
 
   <ItemGroup>
     <TypeScriptCompile Include="src\Actions\UserLoginActions.tsx" />
+    <TypeScriptCompile Include="src\Actions\UserSignUpActions.tsx" />
     <TypeScriptCompile Include="src\Components\GoogleMapsComponent.tsx" />
     <TypeScriptCompile Include="src\Components\HOCHome.tsx" />
     <TypeScriptCompile Include="src\Components\UserLoginComponent.tsx" />
     <TypeScriptCompile Include="src\Components\TrendingItemComponent.tsx" />
     <TypeScriptCompile Include="src\Components\TrendingItemContainerComponent.tsx" />
     <TypeScriptCompile Include="src\Components\UserLoginHOC.tsx" />
+    <TypeScriptCompile Include="src\Components\UserSignUpComponent.tsx" />
     <TypeScriptCompile Include="src\Constants\UserLoginConstants.tsx" />
+    <TypeScriptCompile Include="src\Constants\UserSignUpConstants.tsx" />
     <TypeScriptCompile Include="src\Containers\UserLoginContainer.tsx" />
+    <TypeScriptCompile Include="src\Containers\UserSignUpContainer.tsx" />
     <TypeScriptCompile Include="src\Entry\HomeEntry.tsx" />
     <TypeScriptCompile Include="Scripts\Home\Home\ContainerHome.tsx" />
     <TypeScriptCompile Include="src\Components\CarouselComponent.tsx" />
     <TypeScriptCompile Include="src\Components\NavigationBarComponent.tsx" />
     <TypeScriptCompile Include="src\Entry\UserLoginEntry.tsx" />
+    <TypeScriptCompile Include="src\Entry\UserSignUpEntry.tsx" />
     <TypeScriptCompile Include="src\Misc\GetAntiForgeryToken.ts" />
     <TypeScriptCompile Include="src\Reducers\HomeReducer.tsx" />
     <TypeScriptCompile Include="src\Reducers\UserLoginReducer.tsx" />
+    <TypeScriptCompile Include="src\Reducers\UserSignUpReducers.tsx" />
     <TypeScriptCompile Include="src\Stores\UserLoginStores.tsx" />
+    <TypeScriptCompile Include="src\Stores\UserSignUpStore.tsx" />
     <TypeScriptCompile Include="src\Types\UserLoginStoreState.tsx" />
+    <TypeScriptCompile Include="src\Types\UserSignUpStoreState.tsx" />
   </ItemGroup>
 
   <ItemGroup>

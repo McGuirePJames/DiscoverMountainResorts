@@ -1,0 +1,182 @@
+﻿body {
+    background-color: #F1F1F1;
+}
+
+#UserSignUpComponent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 720px) {
+    #UserSignUpMountPoint {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    #UserSignUpComponent #UserSignUpComponentContainer {
+        max-width: 100%;
+    }
+}
+
+#UserSignUpComponent .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#UserSignUpComponent p {
+    margin-bottom: 0;
+}
+
+#UserSignUpComponent .icon-container {
+    position: absolute;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+    #UserSignUpComponent .icon-container:first-child {
+        left: 10px;
+    }
+
+    #UserSignUpComponent .icon-container:last-child {
+        right: 10px;
+    }
+
+    #UserSignUpComponent .icon-container.icon-eye i {
+        cursor: pointer;
+    }
+
+
+#UserSignUpComponent #UserSignUpComponentContainer {
+    display: flex;
+    -webkit-box-shadow: 1px 1px 6px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 6px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px 1px 6px 0px rgba(0,0,0,0.75);
+    margin-top: 250px;
+}
+
+    #UserSignUpComponent #UserSignUpComponentContainer .left {
+        background-color: #0E99D1;
+    }
+
+@media (min-width: 692px) {
+    #UserSignUpComponent #UserSignUpComponentContainer .right {
+        width: 600px;
+    }
+}
+
+#UserSignUpComponent #UserSignUpComponentContainer .right {
+    background-color: white;
+    padding: 30px;
+}
+
+    #UserSignUpComponent #UserSignUpComponentContainer .right .company-logo-name {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #UserSignUpComponent #UserSignUpComponentContainer .right .company-name {
+        font-size: 22pt;
+        font-weight: 300;
+    }
+
+    #UserSignUpComponent #UserSignUpComponentContainer .right .company-logo {
+        height: 50px;
+        width: 50px;
+        background-color: orange;
+        border-radius: 30px;
+    }
+
+    #UserSignUpComponent #UserSignUpComponentContainer .right .form-purpose {
+        display: flex;
+        justify-content: center;
+        font-size: 15pt;
+        font-weight: 100;
+        margin-bottom: 30px;
+    }
+
+    #UserSignUpComponent #UserSignUpComponentContainer .right .form-data {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #UserSignUpComponent #UserSignUpComponentContainer .right .form-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+        #UserSignUpComponent #UserSignUpComponentContainer .right .form-group label {
+            font-weight: 400;
+        }
+
+        #UserSignUpComponent #UserSignUpComponentContainer .right .form-group .input-group {
+            display: flex;
+            width: 346px;
+        }
+
+            #UserSignUpComponent #UserSignUpComponentContainer .right .form-group .input-group input {
+                height: 38px;
+                border: 1px solid #acacac;
+                border-radius: 2px;
+                width: 346px;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+
+@media (max-width: 420px) {
+    #UserSignUpComponent #UserSignUpComponentContainer .right .form-group .input-group {
+        width: 230px !important;
+    }
+
+        #UserSignUpComponent #UserSignUpComponentContainer .right .form-group .input-group input {
+            width: 230px !important;
+        }
+}
+
+#UserSignUpComponent .right .sign-up-button-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    #UserSignUpComponent .right .sign-up-button-container #SignUp {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 35px;
+        padding-right: 35px;
+        cursor: pointer;
+        background-color: #0e99d1;
+        color: white;
+        border-radius: 3px;
+        position: relative;
+        -webkit-box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.75);
+        box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.75);
+        transition: .05s;
+        user-select: none;
+        margin-top: 20px;
+    }
+
+        #UserSignUpComponent .right .sign-up-button-container #SignUp:active {
+            -webkit-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
+            box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
+            top: 1px;
+        }
+
+#UserSignUpComponent .sign-up-error-container {
+    margin-top: 30px;
+}
+
+    #UserSignUpComponent .sign-up-error-container p {
+        padding: 10px 30px 10px 30px;
+        text-align: center;
+    }

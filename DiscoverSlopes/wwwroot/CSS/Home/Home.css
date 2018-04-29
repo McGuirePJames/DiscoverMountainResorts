@@ -4,6 +4,7 @@
 
 
 
+
 #GoogleMapsContainer {
     width: 90%;
     margin-left: 5%;
@@ -17,63 +18,74 @@
 
     #GoogleMapsContainer .column-left {
         background-color: white;
-        -webkit-box-shadow: 0px 2px 3px 1px rgba(0,0,0,0.75);
-        -moz-box-shadow: 0px 2px 3px 1px rgba(0,0,0,0.75);
-        box-shadow: 0px 2px 3px 1px rgba(0,0,0,0.75);
         z-index: 1;
         padding: 5px 25px 5px 25px;
     }
 
-        #GoogleMapsContainer .column-left b {
-            color: #38BBED;
-        }
-
-        #GoogleMapsContainer .column-left .title {
-            margin-top: 15px;
-            font-size: 21pt;
-            line-height: 38px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-
-        #GoogleMapsContainer .column-left .border-separator {
-            height: 3px;
-            width: 100%;
-            background-color: rgb(234, 233, 235);
-            background-color: #38bbed;
-            margin-bottom: 15px;
-            margin-top: 15px;
-        }
-
-        #GoogleMapsContainer .column-left .description {
-            font-size: 15pt;
-        }
-
-    #GoogleMapsContainer p {
-        margin-bottom: 0;
-        font-weight: 100;
+@media (max-width: 768px) {
+    #GoogleMapsContainer .column-left {
+        -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.75);
     }
+}
+
+#GoogleMapsContainer .column-left b {
+    color: #38BBED;
+}
+
+#GoogleMapsContainer .column-left .title {
+    margin-top: 15px;
+    font-size: 21pt;
+    line-height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#GoogleMapsContainer .column-left .border-separator {
+    height: 3px;
+    width: 100%;
+    background-color: rgb(234, 233, 235);
+    background-color: #38bbed;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+#GoogleMapsContainer .column-left .description {
+    font-size: 15pt;
+}
+
+#GoogleMapsContainer p {
+    margin-bottom: 0;
+    font-weight: 100;
+}
 
 #map {
     width: 100%;
     height: 600px;
 }
 
+
 .trending-item-container-component {
     width: 90%;
     margin-left: 5%;
     margin-bottom: 50px;
+    line-height: 1;
 }
+
+    .trending-item-container-component .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
 
     .trending-item-container-component p {
         margin-bottom: 0;
     }
 
 .trending-item {
-    /* min-height: 400px; */
-    /* max-height: 400px; */
+    border-radius: 3px;
     overflow: hidden;
     -webkit-box-shadow: 1px 1px 6px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 1px 1px 6px 0px rgba(0,0,0,0.75);
@@ -84,8 +96,6 @@
 
 .trending-item-container-component .trending-item-container .trending-item .top {
     z-index: 100;
-    min-height: 60%;
-    max-height: 60%;
     overflow: hidden;
     background-color: #05202B;
 }
@@ -122,6 +132,7 @@
 .trending-item-container-component .trending-item-container .trending-item .bottom {
     /* min-height: 40%; */
     background-color: #05202B;
+    background-color: white;
     /* overflow: hidden; */
 }
 
@@ -134,21 +145,25 @@
 
         .trending-item-container-component .trending-item-container .trending-item .bottom .trending-product-ski-resort p {
             font-size: 22pt;
-            color: white;
+            font-family: roboto;
+            color: black;
             font-weight: 400;
         }
 
     .trending-item-container-component .trending-item-container .trending-item .bottom .trending-product-item-name {
         color: white;
+        color: black;
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        padding: 2px 20px 10px 20px;
+        padding: 8px 20px 10px 24px;
     }
+
+
 
         .trending-item-container-component .trending-item-container .trending-item .bottom .trending-product-item-name p {
             font-size: 16pt;
-            font-weight: 100;
+            color: #A7A7A7
         }
 
         .trending-item-container-component .trending-item-container .trending-item .bottom .trending-product-item-name .trending-product-icon-container {
@@ -187,3 +202,41 @@
                 -moz-box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.75);
                 box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.75);
             }
+
+.trending-item-container-component .trending-item-container .bottom .item-details-container {
+    display: flex;
+    padding: 20px 0px 20px 0px;
+}
+
+    .trending-item-container-component .trending-item-container .bottom .item-details-container .learn-more-container {
+        font-size: 14pt;
+        color: #38BBED;
+        font-weight: 500;
+        cursor: pointer;
+        padding-right: 15px;
+        ;
+        padding-left: 23px;
+    }
+
+    .trending-item-container-component .trending-item-container .bottom .item-details-container .viewed-like-container {
+        display: flex;
+        margin-left: auto;
+        margin-right: 20px;
+    }
+
+        .trending-item-container-component .trending-item-container .bottom .item-details-container .viewed-like-container i {
+            padding-right: 5px;
+        }
+
+
+
+        .trending-item-container-component .trending-item-container .bottom .item-details-container .viewed-like-container .viewed {
+            display: flex;
+            align-items: center;
+            padding-right: 10px;
+        }
+
+        .trending-item-container-component .trending-item-container .bottom .item-details-container .viewed-like-container .liked {
+            display: flex;
+            align-items: center;
+        }

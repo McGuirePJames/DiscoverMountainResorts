@@ -3,8 +3,6 @@
 export class NavigationBarComponent extends React.Component {
     render() {
         return (
-
-
             <nav className="navbar navbar-expand-lg navbar-light">
                 <style dangerouslySetInnerHTML={{
                     __html: `

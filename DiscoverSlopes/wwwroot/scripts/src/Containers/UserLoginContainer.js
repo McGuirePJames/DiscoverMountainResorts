@@ -19,5 +19,4 @@ function mapDispatchToProps(dispatch) {
 }
 exports.mapDispatchToProps = mapDispatchToProps;
 exports.default = react_redux_1.connect(mapStateToProps, mapDispatchToProps)(UserLoginComponent_1.default);
-// 
 //# sourceMappingURL=UserLoginContainer.js.map

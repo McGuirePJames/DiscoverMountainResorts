@@ -81,6 +81,7 @@ namespace CoreWebApplication
             {
                 // Cookie settings
                 options.Cookie.HttpOnly = true;
+                options.Cookie.Name = "DiscoverMountainResortsIdentityCookie";
                 options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
                 // If the LoginPath isn't set, ASP.NET Core defaults 
                 // the path to /Account/Login.

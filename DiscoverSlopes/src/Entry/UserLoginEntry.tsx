@@ -11,17 +11,10 @@ import ReduxPromise from 'redux-promise';
 import { NavigationBarComponent } from '../Components/NavigationBarComponent'
 import { UserLoginStore } from '../Stores/UserLoginStores'
 
-//const middleWare = applyMiddleware(thunk);
-
-//const store = createStore<UserLoginStoreState>(UserLoginReducer, {
-//    loginError: "",
-//    isPasswordRevealed: false,
-//}, middleWare);
-
 
 ReactDOM.render(
     <NavigationBarComponent />,
-    document.getElementById('MountPoint')
+    document.getElementById('NavigationBarMountPoint')
 )
 
 ReactDOM.render(
