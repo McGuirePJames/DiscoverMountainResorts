@@ -4,12 +4,15 @@ import { default as thunk } from "redux-thunk";
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import ReduxPromise from 'redux-promise';
-import { NavigationBarComponent } from '../Components/NavigationBarComponent'
+import NavigationBarContainer from '../Containers/NavigationBarContainer'
 import UserSignUpContainer from '../Containers/UserSignUpContainer'
 import { UserSignUpStore } from '../Stores/UserSignUpStore'
+import { CurrentUserStore } from '../Stores/CurrentUserStore'
 
 ReactDOM.render(
-    <NavigationBarComponent />,
+    <Provider store={CurrentUserStore} >
+        <NavigationBarContainer />
+    </Provider>,
     document.getElementById('NavigationBarMountPoint')
 )
 

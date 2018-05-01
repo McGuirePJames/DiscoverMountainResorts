@@ -1,12 +1,12 @@
 ﻿import * as React from 'react';
-import { NavigationBarComponent } from '../Components/NavigationBarComponent'
+import  NavigationBarContainer  from '../Containers/NavigationBarContainer'
 import UserLoginComponent  from '../Components/UserLoginComponent'
 
 export class UserLoginHOC extends React.Component {
     render() {
         return (
             <div>
-                <NavigationBarComponent />
+                <NavigationBarContainer />
                 <UserLoginComponent loginError=""/>
             </div>
         )

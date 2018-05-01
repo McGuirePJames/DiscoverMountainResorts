@@ -11,10 +11,12 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
-var NavigationBarComponent_1 = require("../Components/NavigationBarComponent");
+var NavigationBarContainer_1 = require("../Containers/NavigationBarContainer");
 var CarouselComponent_1 = require("../Components/CarouselComponent");
 var GoogleMapsComponent_1 = require("../Components/GoogleMapsComponent");
 var TrendingItemContainerComponent_1 = require("../Components/TrendingItemContainerComponent");
+var react_redux_1 = require("react-redux");
+var CurrentUserStore_1 = require("../Stores/CurrentUserStore");
 var HOCHome = /** @class */ (function (_super) {
     __extends(HOCHome, _super);
     function HOCHome() {
@@ -22,7 +24,8 @@ var HOCHome = /** @class */ (function (_super) {
     }
     HOCHome.prototype.render = function () {
         return (React.createElement("div", null,
-            React.createElement(NavigationBarComponent_1.NavigationBarComponent, null),
+            React.createElement(react_redux_1.Provider, { store: CurrentUserStore_1.CurrentUserStore },
+                React.createElement(NavigationBarContainer_1.default, null)),
             React.createElement(CarouselComponent_1.CarouselComponent, null),
             React.createElement(GoogleMapsComponent_1.GoogleMapsComponent, null),
             React.createElement(TrendingItemContainerComponent_1.TrendingItemContainerComponent, null)));

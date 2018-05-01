@@ -23,8 +23,27 @@ export class CarouselComponent extends React.Component {
             <div id="CarouselComponent">
                 <style dangerouslySetInnerHTML={{
                     __html: `
-                        #CarouselComponent {
-                            border-bottom: solid;
+
+
+                        .carousel-container {
+                            z-index: 500;
+
+                        }
+                        .welcome-image{
+                        -moz-box-shadow:0 0 8px 0 black;
+                        -webkit-box-shadow:0 0 8px 0 black;
+                        box-shadow:0 0 8px 0 black;
+                        }
+                        .slick-list{
+                            overflow: visible !important;
+                        }
+                        .collapse > div button {
+                            height: inherit;
+                        }
+                        
+                        .slick-dots {
+                            bottom: -35px !important;
+                            z-index: -1;
                         }
                         .carousel-container{
                             background-color: #05202B; 

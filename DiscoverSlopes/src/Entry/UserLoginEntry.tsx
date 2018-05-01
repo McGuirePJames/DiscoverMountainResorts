@@ -10,10 +10,13 @@ import * as Actions from '../Actions/UserLoginActions';
 import ReduxPromise from 'redux-promise';
 import { NavigationBarComponent } from '../Components/NavigationBarComponent'
 import { UserLoginStore } from '../Stores/UserLoginStores'
-
+import NavigationBarContainer from '../Containers/NavigationBarContainer'
+import { CurrentUserStore } from '../Stores/CurrentUserStore'
 
 ReactDOM.render(
-    <NavigationBarComponent />,
+    <Provider store={CurrentUserStore} >
+        <NavigationBarContainer />
+    </Provider>,
     document.getElementById('NavigationBarMountPoint')
 )
 

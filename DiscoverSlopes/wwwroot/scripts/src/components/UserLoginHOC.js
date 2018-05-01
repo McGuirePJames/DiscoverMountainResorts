@@ -11,7 +11,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
-var NavigationBarComponent_1 = require("../Components/NavigationBarComponent");
+var NavigationBarContainer_1 = require("../Containers/NavigationBarContainer");
 var UserLoginComponent_1 = require("../Components/UserLoginComponent");
 var UserLoginHOC = /** @class */ (function (_super) {
     __extends(UserLoginHOC, _super);
@@ -20,7 +20,7 @@ var UserLoginHOC = /** @class */ (function (_super) {
     }
     UserLoginHOC.prototype.render = function () {
         return (React.createElement("div", null,
-            React.createElement(NavigationBarComponent_1.NavigationBarComponent, null),
+            React.createElement(NavigationBarContainer_1.default, null),
             React.createElement(UserLoginComponent_1.default, { loginError: "" })));
     };
     return UserLoginHOC;

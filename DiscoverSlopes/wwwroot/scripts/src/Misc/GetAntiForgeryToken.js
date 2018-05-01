@@ -11,4 +11,9 @@ function GetAntiForgeryToken(data) {
 }
 exports.default = GetAntiForgeryToken;
 ;
+function GetAntiForgeryTokenWithoutData() {
+    return $("[name='__RequestVerificationToken']").val();
+}
+exports.GetAntiForgeryTokenWithoutData = GetAntiForgeryTokenWithoutData;
+;
 //# sourceMappingURL=GetAntiForgeryToken.js.map

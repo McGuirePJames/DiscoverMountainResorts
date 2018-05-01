@@ -9,3 +9,6 @@ export default function GetAntiForgeryToken(data) {
     return data;
 };
 
+export function GetAntiForgeryTokenWithoutData() {
+    return $("[name='__RequestVerificationToken']").val();
+};

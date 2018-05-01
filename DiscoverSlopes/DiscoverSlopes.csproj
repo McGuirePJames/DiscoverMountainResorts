@@ -8,6 +8,7 @@
     <None Remove="Scripts\entry.tsx" />
     <None Remove="Scripts\Home\Home\ContainerHome.tsx" />
     <None Remove="Scripts\TestEntry.tsx" />
+    <None Remove="src\Actions\CurrentUserActions.tsx" />
     <None Remove="src\Actions\UserLoginActions.tsx" />
     <None Remove="src\Actions\UserSignUpActions.tsx" />
     <None Remove="src\Components\CarouselComponent.tsx" />
@@ -19,8 +20,10 @@
     <None Remove="src\Components\UserLoginComponent.tsx" />
     <None Remove="src\Components\UserLoginHOC.tsx" />
     <None Remove="src\Components\UserSignUpComponent.tsx" />
+    <None Remove="src\Constants\CurrentUserConstants.tsx" />
     <None Remove="src\Constants\UserLoginConstants.tsx" />
     <None Remove="src\Constants\UserSignUpConstants.tsx" />
+    <None Remove="src\Containers\NavigationBarContainer.tsx" />
     <None Remove="src\Containers\UserLoginContainer.tsx" />
     <None Remove="src\Containers\UserSignUpContainer.tsx" />
     <None Remove="src\Entry\UserLoginEntry.tsx" />
@@ -28,18 +31,25 @@
     <None Remove="src\Misc\GetAntiForgeryToken.ts" />
     <None Remove="src\Reducers\HomeReducer.tsx" />
     <None Remove="src\Reducers\UserLoginReducer.tsx" />
+    <None Remove="src\Reducers\UserReducer.tsx" />
     <None Remove="src\Reducers\UserSignUpReducers.tsx" />
+    <None Remove="src\Stores\CurrentUserStore.tsx" />
     <None Remove="src\Stores\UserLoginStores.tsx" />
     <None Remove="src\Stores\UserSignUpStore.tsx" />
     <None Remove="src\TEST.tsx" />
+    <None Remove="src\Types\CurrentUserStoreState.tsx" />
     <None Remove="src\Types\UserLoginStoreState.tsx" />
     <None Remove="src\Types\UserSignUpStoreState.tsx" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="6.2.2" />
+    <PackageReference Include="FluentValidation" Version="7.5.2" />
     <PackageReference Include="Microsoft.AspNet.Identity.Core" Version="2.2.1" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="2.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="2.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.2" />
     <PackageReference Include="Microsoft.Owin" Version="4.0.0" />
@@ -48,9 +58,11 @@
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.3" />
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="src\Actions\CurrentUserActions.tsx" />
     <TypeScriptCompile Include="src\Actions\UserLoginActions.tsx" />
     <TypeScriptCompile Include="src\Actions\UserSignUpActions.tsx" />
     <TypeScriptCompile Include="src\Components\GoogleMapsComponent.tsx" />
@@ -60,8 +72,10 @@
     <TypeScriptCompile Include="src\Components\TrendingItemContainerComponent.tsx" />
     <TypeScriptCompile Include="src\Components\UserLoginHOC.tsx" />
     <TypeScriptCompile Include="src\Components\UserSignUpComponent.tsx" />
+    <TypeScriptCompile Include="src\Constants\CurrentUserConstants.tsx" />
     <TypeScriptCompile Include="src\Constants\UserLoginConstants.tsx" />
     <TypeScriptCompile Include="src\Constants\UserSignUpConstants.tsx" />
+    <TypeScriptCompile Include="src\Containers\NavigationBarContainer.tsx" />
     <TypeScriptCompile Include="src\Containers\UserLoginContainer.tsx" />
     <TypeScriptCompile Include="src\Containers\UserSignUpContainer.tsx" />
     <TypeScriptCompile Include="src\Entry\HomeEntry.tsx" />
@@ -72,11 +86,14 @@
     <TypeScriptCompile Include="src\Entry\UserSignUpEntry.tsx" />
     <TypeScriptCompile Include="src\Misc\GetAntiForgeryToken.ts" />
     <TypeScriptCompile Include="src\Reducers\HomeReducer.tsx" />
+    <TypeScriptCompile Include="src\Reducers\UserReducer.tsx" />
     <TypeScriptCompile Include="src\Reducers\UserLoginReducer.tsx" />
     <TypeScriptCompile Include="src\Reducers\UserSignUpReducers.tsx" />
     <TypeScriptCompile Include="src\Stores\UserLoginStores.tsx" />
+    <TypeScriptCompile Include="src\Stores\CurrentUserStore.tsx" />
     <TypeScriptCompile Include="src\Stores\UserSignUpStore.tsx" />
     <TypeScriptCompile Include="src\Types\UserLoginStoreState.tsx" />
+    <TypeScriptCompile Include="src\Types\CurrentUserStoreState.tsx" />
     <TypeScriptCompile Include="src\Types\UserSignUpStoreState.tsx" />
   </ItemGroup>
 

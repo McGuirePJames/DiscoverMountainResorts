@@ -32,11 +32,17 @@ var TrendingItemComponent = /** @class */ (function (_super) {
                             React.createElement("div", { className: "trending-product-ski-resort" },
                                 React.createElement("p", null, "The Canyons")),
                             React.createElement("div", { className: "trending-product-item-name" },
-                                React.createElement("p", null, "9990 Ski Lift "),
-                                React.createElement("div", { className: "trending-product-icon-container" },
-                                    React.createElement("i", { className: "fa fa-cutlery", "aria-hidden": "true" }))))),
-                    React.createElement("div", { className: "trending-product-view" },
-                        React.createElement("div", null, "View"))))));
+                                React.createElement("p", null, "9990 Ski Lift ")))),
+                    React.createElement("div", { className: "item-details-container" },
+                        React.createElement("div", { className: "learn-more-container" },
+                            React.createElement("p", null, "Discover")),
+                        React.createElement("div", { className: "viewed-like-container" },
+                            React.createElement("div", { className: "viewed" },
+                                React.createElement("i", { className: "material-icons" }, "remove_red_eye"),
+                                React.createElement("p", null, "123")),
+                            React.createElement("div", { className: "liked" },
+                                React.createElement("i", { className: "material-icons" }, "thumb_up"),
+                                React.createElement("p", null, "18"))))))));
     };
     return TrendingItemComponent;
 }(React.Component));
