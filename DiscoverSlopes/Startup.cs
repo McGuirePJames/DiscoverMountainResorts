@@ -22,8 +22,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using DiscoverSlopes.Helpers;
-using DiscoverSlopes.Auth;
 
 namespace CoreWebApplication
 {
@@ -53,7 +51,7 @@ namespace CoreWebApplication
                 option.UseSqlServer(connectionString: Configuration.GetConnectionString("DiscoverMountainResortsProdDB")));
 
             services.TryAddSingleton<Microsoft.AspNetCore.Http.IHttpContextAccessor, HttpContextAccessor>();
-			services.AddSingleton<IJwtFactory, JwtFactory>();
+
 			services.AddScoped<IUserClaimsPrincipalFactory<ApplicationUser>, ApplicationUserClaimsPrincipalFactory>();
 
             services.AddMvc();

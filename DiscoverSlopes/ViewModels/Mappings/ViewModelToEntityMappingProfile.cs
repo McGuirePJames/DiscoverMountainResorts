@@ -1,6 +1,4 @@
-﻿
-using DiscoverSlopes.Models.Entities;
-using AutoMapper;
+﻿using AutoMapper;
 using DiscoverSlopes.ViewModels;
 
 namespace DiscoverSlopesWebApiAuth.ViewModels.Mappings
