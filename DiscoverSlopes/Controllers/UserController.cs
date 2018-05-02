@@ -55,12 +55,16 @@ namespace DiscoverSlopes.Controllers
 
 		[HttpGet]
 		[ValidateAntiForgeryToken]
-		[Authorize]
 		public async Task<IActionResult> GetCurrentUser()
 		{
 			ClaimsPrincipal userClaims = HttpContext.User;
 			ApplicationUser applicationUser = await mUserManager.GetUserAsync(userClaims);
-			return Json( new { success = true, responseText = applicationUser });
+			if(applicationUser != null)
+			{
+				return Json(new { success = true, responseText = applicationUser });
+			}
+			return Json(new { success = false});
+
 		}
         [HttpPost]
         [AllowAnonymous]

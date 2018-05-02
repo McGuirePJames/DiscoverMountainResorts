@@ -1,16 +1,20 @@
 ﻿/// <binding />
 const webpack = require('webpack');
 const Pkg = require('./package.json');
+//var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 //config = {
 module.exports = {
     plugins: [
         new webpack.optimize.CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.bundle.js', minChunks: Infinity }),
-
+        //new BundleAnalyzerPlugin()
+        //new UglifyJsPlugin()
     ],
     entry: {
         Home: './src/Entry/HomeEntry',
         UserLogin: './src/Entry/UserLoginEntry',
         UserSignUp: './src/Entry/UserSignUpEntry',
+        SkiResortsExplore: './src/Entry/SkiResortsExplore',
         vendor: Object.keys(Pkg.dependencies)
     },
 

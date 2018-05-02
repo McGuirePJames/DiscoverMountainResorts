@@ -15,6 +15,7 @@
     <None Remove="src\Components\GoogleMapsComponent.tsx" />
     <None Remove="src\Components\HOCHome.tsx" />
     <None Remove="src\Components\NavigationBarComponent.tsx" />
+    <None Remove="src\Components\SkiResortsExploreHOC.tsx" />
     <None Remove="src\Components\TrendingItemComponent.tsx" />
     <None Remove="src\Components\TrendingItemContainerComponent.tsx" />
     <None Remove="src\Components\UserLoginComponent.tsx" />
@@ -26,6 +27,7 @@
     <None Remove="src\Containers\NavigationBarContainer.tsx" />
     <None Remove="src\Containers\UserLoginContainer.tsx" />
     <None Remove="src\Containers\UserSignUpContainer.tsx" />
+    <None Remove="src\Entry\SkiResortsExplore.tsx" />
     <None Remove="src\Entry\UserLoginEntry.tsx" />
     <None Remove="src\Entry\UserSignUpEntry.tsx" />
     <None Remove="src\Misc\GetAntiForgeryToken.ts" />
@@ -67,6 +69,7 @@
     <TypeScriptCompile Include="src\Actions\UserSignUpActions.tsx" />
     <TypeScriptCompile Include="src\Components\GoogleMapsComponent.tsx" />
     <TypeScriptCompile Include="src\Components\HOCHome.tsx" />
+    <TypeScriptCompile Include="src\Components\SkiResortsExploreHOC.tsx" />
     <TypeScriptCompile Include="src\Components\UserLoginComponent.tsx" />
     <TypeScriptCompile Include="src\Components\TrendingItemComponent.tsx" />
     <TypeScriptCompile Include="src\Components\TrendingItemContainerComponent.tsx" />
@@ -82,6 +85,7 @@
     <TypeScriptCompile Include="Scripts\Home\Home\ContainerHome.tsx" />
     <TypeScriptCompile Include="src\Components\CarouselComponent.tsx" />
     <TypeScriptCompile Include="src\Components\NavigationBarComponent.tsx" />
+    <TypeScriptCompile Include="src\Entry\SkiResortsExplore.tsx" />
     <TypeScriptCompile Include="src\Entry\UserLoginEntry.tsx" />
     <TypeScriptCompile Include="src\Entry\UserSignUpEntry.tsx" />
     <TypeScriptCompile Include="src\Misc\GetAntiForgeryToken.ts" />
@@ -100,7 +104,6 @@
   <ItemGroup>
     <Folder Include="Scripts\Misc\" />
     <Folder Include="src\app\" />
-    <Folder Include="ViewModel\" />
   </ItemGroup>
 
   <ItemGroup>

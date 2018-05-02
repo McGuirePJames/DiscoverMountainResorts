@@ -65,7 +65,7 @@ var NavigationBarComponent = /** @class */ (function (_super) {
                 React.createElement("span", { className: "navbar-toggler-icon" })),
             React.createElement("div", { className: "collapse navbar-collapse", id: "navbarText" },
                 React.createElement("ul", { className: "navbar-nav mr-auto" }),
-                React.createElement("span", { className: "navbar-text" }, this.props.emailAddress != "" ? (React.createElement("div", { className: "container-user-profile" },
+                React.createElement("span", { className: "navbar-text" }, this.props.emailAddress != "" && this.props.emailAddress != null ? (React.createElement("div", { className: "container-user-profile" },
                     React.createElement("div", { className: "container-user-profile-image" },
                         React.createElement("img", { id: "UserProfilePicture", src: "https://storagewms.blob.core.windows.net/profilepictures/IMG_20171230_102809.jpg" })),
                     React.createElement("div", { className: "container-user-profile-name" },

@@ -1,5 +1,5 @@
 ﻿import * as React from 'react';
-var FontAwesome = require('react-fontawesome');
+
 
 
 export class TrendingItemComponent extends React.Component {
@@ -24,10 +24,7 @@ export class TrendingItemComponent extends React.Component {
                                     <p>The Canyons</p>
                                 </div>
                                 <div className="trending-product-item-name">
-                                    <p>9990 Ski Lift </p>
-                                    {/*<div className="trending-product-icon-container">
-                                        <i className="fa fa-cutlery" aria-hidden="true"></i>
-                                    </div> */}
+                                    <p>9990 Ski Lift</p>
                                 </div>
                             </div>
 

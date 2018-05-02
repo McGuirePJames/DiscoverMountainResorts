@@ -1,6 +1,128 @@
-﻿body {
+﻿.info-window {
+    width: 500px;
+    background-color: white;
+    border: solid;
+    border-width: 2px;
+    -webkit-box-shadow: 0px 2px 9px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 9px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 9px 1px rgba(0,0,0,0.75);
+}
+
+    .info-window p, .info-window div {
+        margin-bottom: 0;
+        font-size: 15pt;
+    }
+
+    .info-window ul {
+        list-style-type: none;
+    }
+
+    .info-window .info-window-container {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+    }
+
+        .info-window .info-window-container .close-window-container {
+            position: absolute;
+            right: -8px;
+            top: -14px;
+        }
+
+            .info-window .info-window-container .close-window-container .fa {
+                cursor: pointer;
+                background-color: white;
+                border-radius: 100%;
+            }
+
+        .info-window .info-window-container .resort-image {
+            width: 55%;
+            display: flex;
+        }
+
+            .info-window .info-window-container .resort-image img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+
+        .info-window .info-window-container .report-details-container {
+            padding: 0 30px 30px 30px;
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+            .info-window .info-window-container .report-details-container > div {
+                margin-top: 10px;
+            }
+
+            .info-window .info-window-container .report-details-container #ResortName {
+                font-size: 20pt;
+                font-weight: 400;
+            }
+
+
+            .info-window .info-window-container .report-details-container .resort-rating-container {
+                display: flex;
+            }
+
+                .info-window .info-window-container .report-details-container .resort-rating-container #ResortRatingNumber {
+                    font-size: 14pt;
+                }
+
+                .info-window .info-window-container .report-details-container .resort-rating-container .resort-rating-stars {
+                    display: flex;
+                    align-items: center;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+
+                .info-window .info-window-container .report-details-container .resort-rating-container #ResortTotalReviews {
+                    font-size: 14pt;
+                }
+
+            .info-window .info-window-container .report-details-container .resort-trails-container > div {
+                margin-top: 5px;
+            }
+
+            .info-window .info-window-container .report-details-container .resort-trails-container div:not(:first-child) p:nth-child(1) {
+                width: 100px;
+                font-size: 13pt;
+            }
+
+            .info-window .info-window-container .report-details-container .resort-trails-container p:nth-child(2) {
+                margin-left: 8px;
+            }
+
+            .info-window .info-window-container .report-details-container .resort-trails-container div:not(:first-child) p:nth-child(2) {
+                font-size: 13pt;
+            }
+
+            .info-window .info-window-container .report-details-container .resort-trails-container .total-trails-container {
+                display: flex;
+            }
+
+            .info-window .info-window-container .report-details-container .resort-trails-container .user-trails {
+                display: flex;
+                margin-left: 20px;
+            }
+
+            .info-window .info-window-container .report-details-container .resort-trails-container .resort-trails {
+                display: flex;
+                margin-left: 20px;
+                margin-top: 0;
+            }
+
+            .info-window .info-window-container .report-details-container .resort-explore-container a {
+                color: #38BBED;
+                font-weight: 400;
+                text-decoration: none;               
+            }
+body {
     background-color: #F1F1F1;
 }
+
 .collapse > div {
     height: 40px;
 }

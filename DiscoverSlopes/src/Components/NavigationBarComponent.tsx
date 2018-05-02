@@ -66,7 +66,7 @@ export class NavigationBarComponent extends React.Component<Props, object> {
                             color: white !important;
                         }
                         .navbar{
-                            height: 40px;
+                            min-height: 40px;
                         }
                         nav {
                             line-height: 0px;
@@ -153,7 +153,7 @@ export class NavigationBarComponent extends React.Component<Props, object> {
                     </ul>
                     <span className="navbar-text">
                         {
-                            this.props.emailAddress != "" ? (
+                            this.props.emailAddress != "" && this.props.emailAddress != null ? (
                                 <div className="container-user-profile">
                                     <div className="container-user-profile-image">
                                         <img id="UserProfilePicture" src="https://storagewms.blob.core.windows.net/profilepictures/IMG_20171230_102809.jpg" />
@@ -163,7 +163,6 @@ export class NavigationBarComponent extends React.Component<Props, object> {
                                         <div>
                                             <i className="fa fa-sign-out" aria-hidden="true" onClick={signOut}></i>
                                         </div>
-                                        {/*<p id="UserLastName" className="user-profile-name">McGuire</p> */}
                                     </div>
                                 </div>
                             ) : (

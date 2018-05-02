@@ -101,7 +101,7 @@ var GoogleMapsComponent = /** @class */ (function (_super) {
             beforeSend: function () {
                 $('html').css('cursor', 'wait');
             },
-            url: "/SkiResort/GetSkiResorts",
+            url: "/SkiResorts/GetSkiResorts",
             type: "GET",
             success: function (response) {
                 return response.responseText;
