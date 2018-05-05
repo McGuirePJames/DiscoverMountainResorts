@@ -25,8 +25,17 @@ namespace DiscoverSlopes.Models
 
             return mappedSkiResorts;
         }
+		public static async Task<DiscoverSlopes.Models.SkiResorts> GetSkiResortById(int id)
+		{
+			var skiResortContext = new DiscoverSlopes.Data.SkiResortContext();
+			DiscoverSlopes.Domain.SkiResorts skiResort = await skiResortContext.SkiResorts.SingleOrDefaultAsync(s => s.SkiResortsId == id);
 
-    }
+			DiscoverSlopes.Models.SkiResorts mappedSkiResort = AutoMapper.Mapper.Map<DiscoverSlopes.Models.SkiResorts>(skiResort);
+
+			return mappedSkiResort;
+		}
+
+	}
 }
 
 

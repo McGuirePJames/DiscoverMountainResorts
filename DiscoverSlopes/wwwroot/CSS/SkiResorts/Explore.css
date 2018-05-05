@@ -1,2 +1,263 @@
-﻿body {
+﻿#SkiResortMapComponent {
+    width: 100%;
+    height: 500px;
+    position: relative;
 }
+
+    #SkiResortMapComponent p, #SkiResortMapComponent label {
+        margin-bottom: 0;
+    }
+
+    #SkiResortMapComponent #map {
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        -webkit-box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.75);
+    }
+
+    #SkiResortMapComponent #SkiResortMapToolBarComponent {
+        width: 310px !important;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        -webkit-box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.75);
+        z-index: 2;
+    }
+
+        #SkiResortMapComponent #SkiResortMapToolBarComponent #MapToolBar {
+            top: 0;
+            height: 500px;
+            width: 60px;
+            background-color: #05202B;
+            color: white;
+            -webkit-box-shadow: 5px 0px 10px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 5px 0px 10px 0px rgba(0,0,0,0.75);
+            box-shadow: 5px 0px 10px 0px rgba(0,0,0,0.75);
+            z-index: 10;
+        }
+
+    #SkiResortMapComponent #MapToolBar .toolbar-action {
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+        #SkiResortMapComponent #MapToolBar .toolbar-action:nth-child(1) {
+            background-color: #FF7D4B;
+        }
+
+        #SkiResortMapComponent #MapToolBar .toolbar-action:nth-child(2) {
+            background-color: #54C3BC;
+        }
+
+        #SkiResortMapComponent #MapToolBar .toolbar-action:nth-child(3) {
+            background-color: #E44A92;
+        }
+
+        #SkiResortMapComponent #MapToolBar .toolbar-action .fa {
+            color: white;
+            font-size: 1.4em;
+        }
+
+    #SkiResortMapComponent #SkiResortMapToolBarComponent #MapActionWindow {
+        background-color: white;
+        height: 500px;
+        position: absolute;
+        top: 0;
+        left: 60px;
+        width: 250px;
+        border-left: solid;
+        z-index: -1;
+    }
+
+
+        #SkiResortMapComponent #SkiResortMapToolBarComponent #MapActionWindow .action-title {
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            -webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.75);
+            box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.75);
+        }
+
+            #SkiResortMapComponent #SkiResortMapToolBarComponent #MapActionWindow .action-title p {
+                font-size: 18pt;
+                font-weight: 300;
+                color: white;
+            }
+
+        #SkiResortMapComponent #SkiResortMapToolBarComponent #MapActionWindow #AddTrailWindow .action-title {
+            background-color: #FF7D4B;
+        }
+
+        #SkiResortMapComponent #SkiResortMapToolBarComponent #MapActionWindow #SearchForTrailsWindow .action-title {
+            background-color: #54C3BC;
+        }
+
+        #SkiResortMapComponent #SkiResortMapToolBarComponent #MapActionWindow #FilterTrailsWindow .action-title {
+            background-color: #E44A92;
+        }
+
+#MapActionWindow .action-window-form {
+    padding: 23px;
+}
+
+    #MapActionWindow .action-window-form .form-group label {
+        color: #444;
+    }
+
+    #MapActionWindow .action-window-form .form-group input {
+        border: 0;
+        outline: 0;
+        background: transparent;
+        border-bottom: 1px solid #DFDFDF;
+        font-size: 14pt;
+        width: 100%;
+    }
+
+        #MapActionWindow .action-window-form .form-group input:focus {
+            border-bottom: 2px solid #38BBED;
+        }
+
+#ListItemComponent {
+    border-width: 1px;
+}
+
+    #ListItemComponent p {
+        font-size: 12pt;
+    }
+
+    #ListItemComponent .selected-items-container {
+        min-height: 30px;
+        border-bottom: 1px solid #DFDFDF;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+        #ListItemComponent .selected-items-container .placeholder {
+            font-size: 14pt;
+            color: #757575
+        }
+
+        #ListItemComponent .selected-items-container .caret-down-container {
+            color: #E0E0E0;
+            margin-left: auto;
+            margin-right: 5px;
+        }
+
+    #ListItemComponent .component-list-items-container {
+        background-color: white;
+        position: absolute;
+        overflow-y: scroll;
+        height: 140px;
+        width: 201px;
+        -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+        z-index: 1;
+    }
+
+        #ListItemComponent .component-list-items-container:empty {
+            height: 0px;
+        }
+
+    #ListItemComponent .list-item-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 8px;
+        padding-left: 20px;
+        padding-right: 10px;
+        padding-bottom: 8px;
+        user-select: none;
+    }
+
+        #ListItemComponent .list-item-container .list-item-checkbox-container {
+            margin-right: 10px;
+        }
+
+        #ListItemComponent .list-item-container input {
+            height: 15px;
+            width: 15px !important;
+        }
+
+.list-item-description-container {
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#ListItemComponent .selected-list-items .selected-item-tag-container {
+    background-color: #38BBED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 2px;
+}
+
+    #ListItemComponent .selected-list-items .selected-item-tag-container .remove-tag-container {
+        color: white;
+        margin-left: 7px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #ListItemComponent .selected-list-items .selected-item-tag-container p {
+        font-size: 8pt;
+        color: white;
+        height: 100%;
+    }
+
+#SkiResortMapToolBarComponent #BeginStopButtonContainer {
+    display: flex;
+    position: relative;
+    position: absolute;
+    bottom: 0;
+}
+
+    #SkiResortMapToolBarComponent #BeginStopButtonContainer .button {
+        margin-right: 10px;
+        position: absolute;
+        bottom: 0;
+    }
+
+    #SkiResortMapToolBarComponent #BeginStopButtonContainer div:nth-child(2) .button {
+        left: 85px;
+    }
+
+#SkiResortMapToolBarComponent .button {
+    background-color: #38BBED;
+    padding: 6px 15px 6px 15px;
+    font-size: 12pt;
+    color: white;
+    border-radius: 2px;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 4px 3px 0px rgba(204,204,204,1);
+    -moz-box-shadow: 0px 4px 3px 0px rgba(204,204,204,1);
+    box-shadow: 0px 4px 3px 0px rgba(204,204,204,1);
+    user-select: none;
+    transition: .1s;
+}
+
+    #SkiResortMapToolBarComponent .button:active {
+        bottom: -2px !important;
+        -webkit-box-shadow: 0px 0px 3px 0px rgba(204,204,204,1);
+        -moz-box-shadow: 0px 0px 3px 0px rgba(204,204,204,1);
+        box-shadow: 0px 0px 3px 0px rgba(204,204,204,1);
+    }

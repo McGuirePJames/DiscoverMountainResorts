@@ -22,9 +22,6 @@ export interface ReturnError {
 export type UserSignUpAction = SignUp | TogglePasswordReveal | ReturnError
 
 
-
-
-
 export function signUpAction(): ReturnError{
     if (isFormComplete) {
         signUp();

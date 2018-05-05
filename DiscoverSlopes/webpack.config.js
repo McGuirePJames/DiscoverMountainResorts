@@ -14,7 +14,7 @@ module.exports = {
         Home: './src/Entry/HomeEntry',
         UserLogin: './src/Entry/UserLoginEntry',
         UserSignUp: './src/Entry/UserSignUpEntry',
-        SkiResortsExplore: './src/Entry/SkiResortsExplore',
+        SkiResortsExplore: './src/Entry/SkiResortsExploreEntry',
         vendor: Object.keys(Pkg.dependencies)
     },
 

@@ -4,12 +4,11 @@ import { default as thunk } from "redux-thunk";
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import ReduxPromise from 'redux-promise';
-import NavigationBarContainer from '../Containers/NavigationBarContainer'
+import { SkiResortsExploreHOC } from '../HOCs/SkiResortsExploreHOC'
 import { CurrentUserStore } from '../Stores/CurrentUserStore'
 
+
 ReactDOM.render(
-    <Provider store={CurrentUserStore} >
-        <NavigationBarContainer />
-    </Provider>,
+        <SkiResortsExploreHOC  />,
     document.getElementById('MountPoint')
 )

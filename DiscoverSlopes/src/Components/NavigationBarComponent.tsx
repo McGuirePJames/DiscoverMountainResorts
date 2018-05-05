@@ -57,6 +57,14 @@ export class NavigationBarComponent extends React.Component<Props, object> {
             <nav className="navbar navbar-expand-lg navbar-light">
                 <style dangerouslySetInnerHTML={{
                     __html: `
+                        .sign-in-up-container .sign-in-container a:nth-child(1){
+                            font-size: 12.5pt;   
+                            font-weight: 400;
+                        }
+                        nav .navbar-text{
+                            padding-top: 0;
+                            padding-bottom: 0;
+                        }
                         nav p {
                             margin-bottom: 0;
                             color: white !important;

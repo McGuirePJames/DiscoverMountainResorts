@@ -11,7 +11,6 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
-var FontAwesome = require('react-fontawesome');
 var TrendingItemComponent = /** @class */ (function (_super) {
     __extends(TrendingItemComponent, _super);
     function TrendingItemComponent() {
@@ -32,7 +31,7 @@ var TrendingItemComponent = /** @class */ (function (_super) {
                             React.createElement("div", { className: "trending-product-ski-resort" },
                                 React.createElement("p", null, "The Canyons")),
                             React.createElement("div", { className: "trending-product-item-name" },
-                                React.createElement("p", null, "9990 Ski Lift ")))),
+                                React.createElement("p", null, "9990 Ski Lift")))),
                     React.createElement("div", { className: "item-details-container" },
                         React.createElement("div", { className: "learn-more-container" },
                             React.createElement("p", null, "Discover")),

@@ -2,7 +2,7 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 
-import { HOCHome } from '../Components/HOCHome'
+import { HOCHome } from '../HOCs/HOCHome'
 
 ReactDOM.render(
     <HOCHome/>,

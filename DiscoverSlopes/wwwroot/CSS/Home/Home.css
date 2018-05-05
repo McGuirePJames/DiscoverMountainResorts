@@ -131,67 +131,7 @@ body {
         height: inherit;
     }
 
-#GoogleMapsContainer {
-    width: 90%;
-    margin-left: 5%;
-    margin-top: 45px;
-    border-radius: 2px;
-    -webkit-box-shadow: 1px 1px 6px 0 rgba(0,0,0,0.75);
-    -moz-box-shadow: 1px 1px 6px 0 rgba(0,0,0,0.75);
-    box-shadow: 1px 1px 6px 0 rgba(0,0,0,0.75);
-    margin-bottom: 20px;
-}
 
-    #GoogleMapsContainer .column-left {
-        background-color: white;
-        z-index: 1;
-        padding: 5px 25px 5px 25px;
-    }
-
-@media (max-width: 768px) {
-    #GoogleMapsContainer .column-left {
-        -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.75);
-        -moz-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.75);
-        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.75);
-    }
-}
-
-#GoogleMapsContainer .column-left b {
-    color: #38BBED;
-}
-
-#GoogleMapsContainer .column-left .title {
-    margin-top: 15px;
-    font-size: 21pt;
-    line-height: 38px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-#GoogleMapsContainer .column-left .border-separator {
-    height: 3px;
-    width: 100%;
-    background-color: rgb(234, 233, 235);
-    background-color: #38bbed;
-    margin-bottom: 15px;
-    margin-top: 15px;
-}
-
-#GoogleMapsContainer .column-left .description {
-    font-size: 15pt;
-}
-
-#GoogleMapsContainer p {
-    margin-bottom: 0;
-    font-weight: 100;
-}
-
-#map {
-    width: 100%;
-    height: 600px;
-}
 
 
 .trending-item-container-component {
@@ -244,15 +184,17 @@ body {
             }
 
         .trending-item-container-component .trending-item-container .trending-item .top .trending-item-image-container .trending-image-item-image-container {
-            height: 100%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+
         }
 
             .trending-item-container-component .trending-item-container .trending-item .top .trending-item-image-container .trending-image-item-image-container img {
-                height: 100%;
+                bottom: 0;
+                left: 0;
+                margin: auto;
+                max-height: 100%;
+                position: absolute;
+                right: 0;
+                top: 0;
             }
 
 .trending-item-container-component .trending-item-container .trending-item .bottom {

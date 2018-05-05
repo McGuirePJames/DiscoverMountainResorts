@@ -1,6 +1,7 @@
 ﻿import * as React from 'react'
 import * as $ from 'jquery'
 import { PropTypes } from 'react';
+import { GetAntiForgeryTokenWithoutData } from '../Misc/GetAntiForgeryToken';
 
 declare var google: any
 declare var MarkerClusterer: any
@@ -56,6 +57,9 @@ export class GoogleMapsComponent extends React.Component<any, any> {
             },
             url: "/SkiResorts/GetSkiResorts",
             type: "GET",
+            headers: {
+                "RequestVerificationToken": $("[name='__RequestVerificationToken']").val()
+            },
             success: function (response) {
                 return response.responseText;
             },
@@ -161,6 +165,71 @@ export class GoogleMapsComponent extends React.Component<any, any> {
     render() {
         return (
             <div id="GoogleMapsContainer" className="row">
+
+                <style dangerouslySetInnerHTML={{
+                    __html: `
+                    #GoogleMapsContainer {
+                        width: 90%;
+                        margin-left: 5%;
+                        margin-top: 45px;
+                        border-radius: 2px;
+                        -webkit-box-shadow: 1px 1px 6px 0 rgba(0,0,0,0.75);
+                        -moz-box-shadow: 1px 1px 6px 0 rgba(0,0,0,0.75);
+                        box-shadow: 1px 1px 6px 0 rgba(0,0,0,0.75);
+                        margin-bottom: 20px;
+                    }
+                    
+                        #GoogleMapsContainer .column-left {
+                            background-color: white;
+                            z-index: 1;
+                            padding: 5px 25px 5px 25px;
+                        }
+                    
+                    @media (max-width: 768px) {
+                        #GoogleMapsContainer .column-left {
+                            -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.75);
+                            -moz-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.75);
+                            box-shadow: 0 2px 2px 0 rgba(0,0,0,0.75);
+                        }
+                    }
+                    
+                    #GoogleMapsContainer .column-left b {
+                        color: #38BBED;
+                    }
+                    
+                    #GoogleMapsContainer .column-left .title {
+                        margin-top: 15px;
+                        font-size: 21pt;
+                        line-height: 38px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-align: center;
+                    }
+                    
+                    #GoogleMapsContainer .column-left .border-separator {
+                        height: 3px;
+                        width: 100%;
+                        background-color: rgb(234, 233, 235);
+                        background-color: #38bbed;
+                        margin-bottom: 15px;
+                        margin-top: 15px;
+                    }
+                    
+                    #GoogleMapsContainer .column-left .description {
+                        font-size: 15pt;
+                    }
+                    
+                    #GoogleMapsContainer p {
+                        margin-bottom: 0;
+                        font-weight: 100;
+                    }
+                    
+                    #map {
+                        width: 100%;
+                        height: 600px;
+                    }
+                        `}} />
                 <section className="column column-left col-sm-12 col-md-3">
                     <div className="title">
                         <p>Find <b>your</b> perfect resort</p>

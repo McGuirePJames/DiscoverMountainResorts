@@ -14,6 +14,7 @@ const middleWare = applyMiddleware(thunk);
 export const CurrentUserStore = createStore<CurrentUserStoreState>(UserReducer, {
     emailAddress: "",
     userProfileImageURL: "",
+
 }, middleWare);
 
 

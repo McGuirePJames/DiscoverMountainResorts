@@ -61,6 +61,7 @@ var GoogleMapsComponent = /** @class */ (function (_super) {
         _this.addSkiResortMarkers = _this.addSkiResortMarkers.bind(_this);
         _this.getSkiResorts = _this.getSkiResorts.bind(_this);
         _this.createMarker = _this.createMarker.bind(_this);
+        _this.createInfoWindow = _this.createInfoWindow.bind(_this);
         return _this;
     }
     GoogleMapsComponent.prototype.alertUser = function () {
@@ -86,7 +87,7 @@ var GoogleMapsComponent = /** @class */ (function (_super) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this.getSkiResorts().then(function (data) {
                             for (var i = 0; i < data.length; i++) {
-                                _this.addMarker(data[i].latitude, data[i].longitude);
+                                _this.addMarker(data[i]);
                             }
                         })];
                     case 1:
@@ -103,6 +104,9 @@ var GoogleMapsComponent = /** @class */ (function (_super) {
             },
             url: "/SkiResorts/GetSkiResorts",
             type: "GET",
+            headers: {
+                "RequestVerificationToken": $("[name='__RequestVerificationToken']").val()
+            },
             success: function (response) {
                 return response.responseText;
             },
@@ -111,98 +115,86 @@ var GoogleMapsComponent = /** @class */ (function (_super) {
             }
         });
     };
-    GoogleMapsComponent.prototype.addMarker = function (lat, lng) {
+    GoogleMapsComponent.prototype.createInfoWindow = function (skiResort) {
+        var html = '<div class="info-window"> ' +
+            '    <div class="info-window-container"> ' +
+            '        <div class="report-details-container"> ' +
+            '            <div class="resort-name-container"> ' +
+            '                <p id="ResortName">' + skiResort["name"] + '</p> ' +
+            '            </div> ' +
+            '            <div class="resort-rating-container"> ' +
+            '                <div id="ResortRatingNumber"> ' +
+            '                    4.3 ' +
+            '                </div> ' +
+            '                <div class="resort-rating-stars"> ' +
+            '                    <div> ' +
+            '                        <i class="fa fa-star" aria-hidden="true"></i> ' +
+            '                    </div> ' +
+            '                    <div> ' +
+            '                        <i class="fa fa-star" aria-hidden="true"></i> ' +
+            '                    </div> ' +
+            '                    <div> ' +
+            '                        <i class="fa fa-star" aria-hidden="true"></i> ' +
+            '                    </div> ' +
+            '                    <div> ' +
+            '                        <i class="fa fa-star-half-o" aria-hidden="true"></i> ' +
+            '                    </div> ' +
+            '                </div> ' +
+            '                <div id="ResortTotalReviews"> ' +
+            '                    377 ' +
+            '                </div> ' +
+            '            </div> ' +
+            '            <div class="resort-trails-container"> ' +
+            '                <div class="total-trails-container"> ' +
+            '                    <p>Trails</p> ' +
+            '                    <p id="ResortTotalTrails">750</p> ' +
+            '                </div> ' +
+            '                <div class="user-trails"> ' +
+            '                    <p>User Trails</p> ' +
+            '                    <p id="UserTrails">500</p> ' +
+            '                </div> ' +
+            '                <div class="resort-trails"> ' +
+            '                    <p>Resort Trails</p> ' +
+            '                    <p id="ResortTrails">500</p> ' +
+            '                </div> ' +
+            '            </div> ' +
+            '            <div class="resort-explore-container"> ' +
+            '                <a href="/SkiResorts/Explore?skiResortId=' + skiResort["skiResortsId"] + '">Explore</a> ' +
+            '            </div> ' +
+            '        </div> ' +
+            '        <div class="resort-image"> ' +
+            '            <img src="' + skiResort["logo"] + '"> ' +
+            '        </div> ' +
+            '    </div> ' +
+            '</div> ';
+        var infowindow = new google.maps.InfoWindow({
+            content: html
+        });
+        return infowindow;
+    };
+    GoogleMapsComponent.prototype.addMarker = function (skiResort) {
         var marker = new google.maps.Marker({
-            position: { lat: lat, lng: lng },
+            position: { lat: skiResort["latitude"], lng: skiResort["longitude"] },
             icon: {
                 size: new google.maps.Size(70, 45.50),
                 scaledSize: new google.maps.Size(70, 45.50),
                 url: "https://storagewms.blob.core.windows.net/profilepictures/MountainIcon.png"
             },
-            map: window.GoogleMap,
-            title: "Hello World"
+            map: window.GoogleMap
+        });
+        var infoWindow = this.createInfoWindow(skiResort);
+        marker.addListener('click', function () {
+            infoWindow.open(window.GoogleMap, marker);
         });
     };
-    //addMarkerCluster() {
-    //    var clusterStyles = [
-    //        {
-    //            textColor: 'white',
-    //            url: "https://storagewms.blob.core.windows.net/profilepictures/MountainIcon.png",
-    //            height: 50,
-    //            width: 50
-    //        },
-    //        {
-    //            textColor: 'white',
-    //            url: "https://storagewms.blob.core.windows.net/profilepictures/MountainIcon.png",
-    //            height: 50,
-    //            width: 50
-    //        },
-    //        {
-    //            textColor: 'white',
-    //            url: "https://storagewms.blob.core.windows.net/profilepictures/MountainIcon.png",
-    //            height: 50,
-    //            width: 50
-    //        }
-    //    ];
-    //    var mcOptions = {
-    //        gridSize: 50,
-    //        styles: clusterStyles,
-    //        maxZoom: 15
-    //    };
-    //    var locations = [
-    //        { lat: -31.563910, lng: 147.154312 },
-    //        { lat: -33.718234, lng: 150.363181 },
-    //        { lat: -33.727111, lng: 150.371124 },
-    //        { lat: -33.848588, lng: 151.209834 },
-    //        { lat: -33.851702, lng: 151.216968 },
-    //        { lat: -34.671264, lng: 150.863657 },
-    //        { lat: -35.304724, lng: 148.662905 },
-    //        { lat: -36.817685, lng: 175.699196 },
-    //        { lat: -36.828611, lng: 175.790222 },
-    //        { lat: -37.750000, lng: 145.116667 },
-    //        { lat: -37.759859, lng: 145.128708 },
-    //        { lat: -37.765015, lng: 145.133858 },
-    //        { lat: -37.770104, lng: 145.143299 },
-    //        { lat: -37.773700, lng: 145.145187 },
-    //        { lat: -37.774785, lng: 145.137978 },
-    //        { lat: -37.819616, lng: 144.968119 },
-    //        { lat: -38.330766, lng: 144.695692 },
-    //        { lat: -39.927193, lng: 175.053218 },
-    //        { lat: -41.330162, lng: 174.865694 },
-    //        { lat: -42.734358, lng: 147.439506 },
-    //        { lat: -42.734358, lng: 147.501315 },
-    //        { lat: -42.735258, lng: 147.438000 },
-    //        { lat: -43.999792, lng: 170.463352 }
-    //    ];
-    //    var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    //    var markers = locations.map(function (location, i) {
-    //        return new google.maps.Marker({
-    //            position: { lat: location.lat, lng: location.lng },
-    //            icon: {
-    //                size: new google.maps.Size(70, 60),
-    //                scaledSize: new google.maps.Size(70, 60),
-    //                origin: new google.maps.Point(0, 0),
-    //                url: "https://storagewms.blob.core.windows.net/profilepictures/MountainIcon.png"
-    //            },
-    //            map: window.GoogleMap,
-    //            label: labels[i % labels.length],
-    //            optimized: false,
-    //            title: "Hello World"
-    //        })
-    //    });
-    //    var myoverlay = new google.maps.OverlayView();
-    //    myoverlay.draw = function () {
-    //        this.getPanes().markerLayer.id = 'markerLayer';
-    //    };
-    //    myoverlay.setMap(window.GoogleMap);
-    //    var markerCluster = new MarkerClusterer(window.GoogleMap, markers, mcOptions)
-    //        //{ imagePath: 'https://storagewms.blob.core.windows.net/profilepictures/MountainIcon.png' });
-    //}
     GoogleMapsComponent.prototype.loadMap = function () {
+        var styledMapType = new google.maps.StyledMapType([], { name: 'Styled Map' });
         window.GoogleMap = new google.maps.Map(document.getElementById('map'), {
             zoom: 7,
-            center: { lat: 40.660061, lng: -111.5876328 }
+            center: { lat: 40.660061, lng: -111.5876328 },
         });
+        window.GoogleMap.mapTypes.set('styled_map', styledMapType);
+        window.GoogleMap.setMapTypeId('styled_map');
     };
     GoogleMapsComponent.prototype.componentDidMount = function () {
         this.loadMap();
@@ -210,6 +202,9 @@ var GoogleMapsComponent = /** @class */ (function (_super) {
     };
     GoogleMapsComponent.prototype.render = function () {
         return (React.createElement("div", { id: "GoogleMapsContainer", className: "row" },
+            React.createElement("style", { dangerouslySetInnerHTML: {
+                    __html: "\n                    #GoogleMapsContainer {\n                        width: 90%;\n                        margin-left: 5%;\n                        margin-top: 45px;\n                        border-radius: 2px;\n                        -webkit-box-shadow: 1px 1px 6px 0 rgba(0,0,0,0.75);\n                        -moz-box-shadow: 1px 1px 6px 0 rgba(0,0,0,0.75);\n                        box-shadow: 1px 1px 6px 0 rgba(0,0,0,0.75);\n                        margin-bottom: 20px;\n                    }\n                    \n                        #GoogleMapsContainer .column-left {\n                            background-color: white;\n                            z-index: 1;\n                            padding: 5px 25px 5px 25px;\n                        }\n                    \n                    @media (max-width: 768px) {\n                        #GoogleMapsContainer .column-left {\n                            -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.75);\n                            -moz-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.75);\n                            box-shadow: 0 2px 2px 0 rgba(0,0,0,0.75);\n                        }\n                    }\n                    \n                    #GoogleMapsContainer .column-left b {\n                        color: #38BBED;\n                    }\n                    \n                    #GoogleMapsContainer .column-left .title {\n                        margin-top: 15px;\n                        font-size: 21pt;\n                        line-height: 38px;\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        text-align: center;\n                    }\n                    \n                    #GoogleMapsContainer .column-left .border-separator {\n                        height: 3px;\n                        width: 100%;\n                        background-color: rgb(234, 233, 235);\n                        background-color: #38bbed;\n                        margin-bottom: 15px;\n                        margin-top: 15px;\n                    }\n                    \n                    #GoogleMapsContainer .column-left .description {\n                        font-size: 15pt;\n                    }\n                    \n                    #GoogleMapsContainer p {\n                        margin-bottom: 0;\n                        font-weight: 100;\n                    }\n                    \n                    #map {\n                        width: 100%;\n                        height: 600px;\n                    }\n                        "
+                } }),
             React.createElement("section", { className: "column column-left col-sm-12 col-md-3" },
                 React.createElement("div", { className: "title" },
                     React.createElement("p", null,
