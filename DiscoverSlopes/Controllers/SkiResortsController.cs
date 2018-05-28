@@ -29,6 +29,7 @@ namespace DiscoverSlopes.Controllers
 		[AllowAnonymous]
 		public IActionResult Explore(int skiResortId)
 		{
+			//Controller
 			return View();
 		}
     }
